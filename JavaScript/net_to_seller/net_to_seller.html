@@ -24,6 +24,32 @@ Prep Fee:
 
 <script type="text/javascript">
 
+$(document).ready(function() {
+
+    $('#amount').keyup(function() {
+        var el = $('#amount').val();
+        var consignmentFee = el * 0.195;
+        var prep = prepFee(el);
+        $('#netToSeller').html(el - consignmentFee - prep);
+        console.log(prep);
+    });
+
+    function prepFee(el) {
+        var fee;
+        if(el <= 2500) {
+            fee = 99;
+        } else if (el <= 5000) {
+            fee = 199;
+        } else if (el <= 13000) {
+            fee = 299;
+        } else {
+            fee = 399;
+        }
+
+        return fee;
+    }
+
+});
 
 </script>
 </body>
