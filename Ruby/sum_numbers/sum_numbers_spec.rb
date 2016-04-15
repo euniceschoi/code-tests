@@ -1,1 +1,0 @@
-sum_numbers_spec.rb
