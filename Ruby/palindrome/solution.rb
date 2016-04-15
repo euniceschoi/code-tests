@@ -4,13 +4,7 @@ class Name
   end
 
   def reversed_name
-    reversed_name = []
-    i = @name.length-1
-    while i >= 0
-      reversed_name.push(@name[i])
-      i -= 1
-    end
-    reversed_name.join
+    @name.reverse
   end
 
   def is_palindrome?
@@ -28,6 +22,8 @@ def find_palindrome(textfile)
 end
 
 find_palindrome("names.txt")
+
+
 # Driver Test
 
 # first_name = Name.new("racecar")
