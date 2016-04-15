@@ -14,7 +14,7 @@ class Name
   end
 
   def is_palindrome?
-    @name == reversed_name
+    @name.downcase == reversed_name.downcase
   end
 end
 
