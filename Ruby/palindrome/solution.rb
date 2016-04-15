@@ -13,15 +13,17 @@ class Name
 end
 
 def find_palindrome(textfile)
+  palindrome = ""
   File.open(textfile, "r").each_line do |line|
     name = line.gsub("\n","")
     if Name.new(name).is_palindrome?
-      p name
+      palindrome = name
     end
   end
+  palindrome
 end
 
-find_palindrome("names.txt")
+p find_palindrome("names.txt")
 
 
 # Driver Test

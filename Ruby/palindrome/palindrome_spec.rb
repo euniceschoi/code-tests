@@ -10,11 +10,11 @@ describe Name do
   end
 
   describe '#palindrome' do
-    it 'should return false if not a palindrome' do
+    it 'should return true if is a palindrome' do
       expect(name_1.is_palindrome?).to eq(true)
     end
 
-    it 'should return true if is a palindrome' do
+    it 'should return false if not a palindrome' do
       expect(name_2.is_palindrome?).to eq(false)
     end
   end
